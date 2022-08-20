@@ -50,3 +50,31 @@ During instance creation, you will be asked to select a security group for your 
 A key pair is made up of a public key and private key.
 
 
+## AWS NETWORKING FUNDAMENTALS
+Default VPC has: 
+    - IPv4 CIDR block
+    - /20 default subnet
+    - Connected Internet Gateway
+    - Security Group (SG)
+** RFC1918 Range **
+Avoid ranges that override with other networks to which you might connect.
+#### Security Groups
+    - Operates at the instance level
+    - Support allow rules only
+    - Is stateful, return traffic is automatically allowed regardless of any rules.
+    - All rules evaluated before deciding whether to allow traffic.
+    - Applies only to instances explicitly associated with the security group.
+#### Network ACL
+    - Operates at subnet level.
+    - Supports allow and deny rules.
+    - Is stateless, return traffic must be explicitly allowed by rules.
+    - Rules evaluated in order when deciding whether to allow traffic.
+    - Automatically applies to all instances launched into associated subnets.
+#### Flow log
+View the connection logs
+
+## VPC Peering
+- Full private IP connectivity between two VPCs.
+- Can Peer VPCs accross regions.
+- VPCs can be in different accounts.
+- VPC CIDR ranges must not overlap.
