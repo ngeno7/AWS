@@ -84,6 +84,6 @@ View the connection logs
 - 5 vpcs are allowed per region.
 ### Subnets
  VPC must have a name and CIDR block address.
-    - Public subnet: accessible from the internet. have private and public IP addresses.
-    - Private subnet: 
+    - Public subnet: accessible from the internet. have private and public IP addresses. Has a route to the internet gateway.
+    - Private subnet: Routed to the local vpc
  Internet Gateway: Managed component on the VPC that acts as a gateway to the internet
