@@ -78,3 +78,12 @@ View the connection logs
 - Can Peer VPCs accross regions.
 - VPCs can be in different accounts.
 - VPC CIDR ranges must not overlap.
+
+## VPC - Virtual Private Cloud
+- Is an isolated segment of the AWS infrastructure allowing you to provision your cloud resources.
+- 5 vpcs are allowed per region.
+### Subnets
+ VPC must have a name and CIDR block address.
+    - Public subnet: accessible from the internet. have private and public IP addresses.
+    - Private subnet: 
+ Internet Gateway: Managed component on the VPC that acts as a gateway to the internet
