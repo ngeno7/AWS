@@ -87,3 +87,10 @@ View the connection logs
     - Public subnet: accessible from the internet. have private and public IP addresses. Has a route to the internet gateway.
     - Private subnet: Routed to the local vpc
  Internet Gateway: Managed component on the VPC that acts as a gateway to the internet
+
+### NACL - Network Access Control Lists
+- A way of controlling how traffic comes in or out of a subnet.
+- Stateless: Any traffic has to be configured either inbound or outbound.
+### Security Groups
+Act as a virtual firewall at the instance level.
+It is statefull. Only the defined rules will be used else other traffic that does not meet will be dropped. Has **no deny** rule
