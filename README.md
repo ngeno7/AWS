@@ -94,3 +94,7 @@ View the connection logs
 ### Security Groups
 Act as a virtual firewall at the instance level.
 It is statefull. Only the defined rules will be used else other traffic that does not meet will be dropped. Has **no deny** rule
+
+### NAT Gateway
+ Allows private subnets to access the internet while blocking connections initiated from the internet.
+ 
