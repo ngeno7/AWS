@@ -98,3 +98,6 @@ It is statefull. Only the defined rules will be used else other traffic that doe
 ### NAT Gateway
  Allows private subnets to access the internet while blocking connections initiated from the internet.
  This allows for patch management so as the instances stay up to date.
+### Bastion Hosts
+Allow access to the private EC2 instances from remote.
+Local user connect to the BH and then can connect from it to the private subnet.
