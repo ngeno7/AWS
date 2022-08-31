@@ -101,3 +101,10 @@ It is statefull. Only the defined rules will be used else other traffic that doe
 ### Bastion Hosts
 Allow access to the private EC2 instances from remote.
 Local user connect to the BH and then can connect from it to the private subnet.
+
+## VPN - Virtual Private Network
+It is a secure way of connecting to a remote network.
+    - Customer Gateway
+    - VPN tunnel
+    - Virtual Gateway
+    
