@@ -118,4 +118,7 @@ It is a secure way of connecting to a remote network.
         Info needed about customer gateway include:  IP address and the type of routing to be used (i.e dynamic or static).
     3. Customer Gateway initiates connection to VGW. 
 
-   ```If there was some idle activity across this link for a period of 10 seconds or more, then this VPN tunnel connection would drop. So, to prevent that from dropping, you can set up network monitoring to set up continuous network pings from the customer gateway side to the virtual gateway to ensure that connection remains up and running.```
+   ```If there was some idle activity across this link for a period of 10 seconds or more, then this VPN tunnel connection would drop. So, to prevent that from dropping, you can set up network monitoring to set up continuous network pings from the customer gateway side to the virtual gateway to ensure that connection remains up and running.
+   SG in the private subnet has to be configured also to allow traffic to be btw CG and VGW
+   SG rules allow SSH and RDP types and DC IP address block.
+   ```
