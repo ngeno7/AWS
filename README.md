@@ -102,9 +102,20 @@ It is statefull. Only the defined rules will be used else other traffic that doe
 Allow access to the private EC2 instances from remote.
 Local user connect to the BH and then can connect from it to the private subnet.
 
-## VPN - Virtual Private Network
+## VPC Connectivity
+
+### VPN - Virtual Private Network
 It is a secure way of connecting to a remote network.
     - Customer Gateway
     - VPN tunnel
     - Virtual Gateway
+    ** Dynamic and static routing
+ 
+    Customer gateway initiates connection to Virtual Gateway.
+    1. You need to create a virtual gateway and this attaches directly to your VPC
+    2. In the data center we create customer gateway.
+    Info needed about customer gateway include:  IP address and the type of routing to be used (i.e dynamic or static).
+    3. Customer Gateway initiates connection to VGW. 
+
+    ***If there was some idle activity across this link for a period of 10 seconds or more, then this VPN tunnel connection would drop. So, to prevent that from dropping, you can set up network monitoring to set up continuous network pings from the customer gateway side to the virtual gateway to ensure that connection remains up and running.***
     
