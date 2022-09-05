@@ -122,3 +122,15 @@ It is a secure way of connecting to a remote network.
    SG in the private subnet has to be configured also to allow traffic to be btw CG and VGW
    SG rules allow SSH and RDP types and DC IP address block.
    ```
+## AWS S3
+Object based storage services. Space is btw 0 bytes and 5 terrabytes.
+Storage exists across a flat address space. To store data in a s3 you must first create a bucket with a unique name.
+
+``` 
+S3 Standard. This storage class is considered a general-purpose storage class. It is ideal for a range of use cases where you need high throughput with low latency with the added ability of being able to access your data frequently. By copying data to multiple availability zones, S3 Standard offers eleven nines of durability across multiple availability zones, meaning the OData remains protected against a single availability zone failure. 
+
+Versioning allows your data to be identified by its latest version or by earlier versions. If you accidentally overwrite some important data, that data can, if you've enabled versioning, be scored and available for retrieval should you need it.
+```
+```
+Amazon Glacier is an extremely low-cost storage service that provides secure and durable storage for data archiving and backup. To keep costs low, Amazon Glacier is optimized for data that is infrequently accessed and for which retrieval times of several hours are suitable. The standard retrieval option, which is the default option, takes 3-5 hours to complete. The other options are expedited, which downloads a small amount of data (250 MB maximum) in 5 minutes, and bulk, which downloads large amounts of data (petabytes) in 5-12 hours.
+```
