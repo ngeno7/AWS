@@ -146,3 +146,19 @@ The standard retrieval option, which is the default option, takes 3-5 hours to c
 The other options are expedited, which downloads a small amount of data (250 MB maximum) in 5 minutes, and bulk, 
 which downloads large amounts of data (petabytes) in 5-12 hours.
 ```
+
+### S3 Bucket Properties
+ - **Standard S3:** 
+     - Versioning: Exists on objects in a bucket. Not enabled by default but can be paused (not disabled) once enabled.
+     - Server Access Logging: Captures reqs made to bucket or object.
+     - Static Website Hosting
+     - Object - level logging
+     - Default encryption
+
+- **Advanced:**
+    - Object lock
+    - Tags
+    - Transfer Acceleration
+    - Events
+    - Requester Pays
+
