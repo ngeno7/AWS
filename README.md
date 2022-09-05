@@ -140,5 +140,6 @@ be scored and available for retrieval should you need it.
 Amazon Glacier is an extremely low-cost storage service that provides secure and durable storage for data archiving and backup. 
 To keep costs low, Amazon Glacier is optimized for data that is infrequently accessed and for which retrieval times of several hours are suitable. 
 The standard retrieval option, which is the default option, takes 3-5 hours to complete.
-The other options are expedited, which downloads a small amount of data (250 MB maximum) in 5 minutes, and bulk, which downloads large amounts of data (petabytes) in 5-12 hours.
+The other options are expedited, which downloads a small amount of data (250 MB maximum) in 5 minutes, and bulk, 
+which downloads large amounts of data (petabytes) in 5-12 hours.
 ```
