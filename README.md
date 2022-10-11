@@ -186,6 +186,8 @@ One of the many advantages of using ELB is the fact that it is managed by AWS.
 **Cross-zone Load balancing:** Depending on which ELB option you select you may have the option of enabling and implementing cross-zone load balancing within your environment.
 
 ```
-when cross-zone load balancing is disabled, each ELB in its associated AZ will distribute the traffic within that AZ only. 
-with cross zone load balancing enabled, the ELB will distribute all incoming traffic between targets.
+When cross-zone load balancing is disabled, each ELB in its associated AZ will distribute the traffic within that AZ only. 
+With cross zone load balancing enabled, the ELB will distribute all incoming traffic between targets.
 ```
+
+
