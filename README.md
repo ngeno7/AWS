@@ -162,3 +162,11 @@ which downloads large amounts of data (petabytes) in 5-12 hours.
     - Events
     - Requester Pays
 
+
+### Elastic Load Balancer
+Helps to manage and control the flow of inbound requests destined to a group of targets by distributing these resources across the targeted resource group. Targets could be a fleet of EC2 instances, lampda functions, a range of IP addresses or even containers.
+The targets defined within the ELB could be situated across different Availability Zones or placed within a single AZ.
+
+One of the many advantages of using ELB is the fact that it is managed by AWS.
+ #### Components
+    - Listeners: For every load balancer, you must configure at least one listener. The listener defines how your inbound connections are routed to your target groups based on ports and protocols set as conditions.
