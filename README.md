@@ -169,4 +169,23 @@ The targets defined within the ELB could be situated across different Availabili
 
 One of the many advantages of using ELB is the fact that it is managed by AWS.
  #### Components
-    - Listeners: For every load balancer, you must configure at least one listener. The listener defines how your inbound connections are routed to your target groups based on ports and protocols set as conditions.
+ **Listeners:** For every load balancer, you must configure at least one listener. The listener defines how your inbound connections are routed to your target groups          based on ports and protocols set as conditions.
+ 
+ **Target Groups:** Is a group of your resources that you want your ELB to route your requests to. You can configure your ELB with a number of different target groups, each associated with a different listener configuration and associated rules.
+
+**Rules:** are associated with each listener that you have configured within your ELB.
+
+**Health checks:** That is performed against the resources defined within the target group. These health checks allow an ELB to contact each target using specific protocol to receive a response.
+
+**Internet-Facing ELB:** The nodes of ELB are accessible via the internet and so have a public DNS name that can be resolved to its public IP address, in addition to an IP address. this allows ELB to serve requests from the internet before distributing and routing the traffic to your target groups.
+
+**Internal ELB:** Has internal IP hence serve requests from the VPC itself.
+
+**ELB Node:** For each AZ selected an ELB node will be placed within that AZ. You need to ensure that you have an ELB node associated to any AZs for which you want to route traffic to. The node are used by the ELB to distribute traffic to your target groups.
+
+**Cross-zone Load balancing:** Depending on which ELB option you select you may have the option of enabling and implementing cross-zone load balancing within your environment.
+
+```
+when cross-zone load balancing is disabled, each ELB in its associated AZ will distribute the traffic within that AZ only. 
+with cross zone load balancing enabled, the ELB will distribute all incoming traffic between targets.
+```
