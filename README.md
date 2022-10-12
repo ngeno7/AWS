@@ -190,4 +190,19 @@ When cross-zone load balancing is disabled, each ELB in its associated AZ will d
 With cross zone load balancing enabled, the ELB will distribute all incoming traffic between targets.
 ```
 
+#### Application Load Balancer
+Operates on layer 7, application layer. The application servers as the interface for users and application processes to access network services.
+
+#### SSL Server Certificates
+The application load balancer provides flexible feature set for your web applications running HTTP or HTTPS protocols.
+
+#### Network Load Balancer
+Operates on layer 4 of the OSI model ***(Transport Layer)*** enabling to balance requests purely based on TCP protocol.
+
+#### Classic Load Balancer
+Support TCP, SSL/TLS, HTTP and HTTPS protocols. It is considered best practice ALB over classic load balancer unless you have an existing application running in the EC2-classic network.
+No longer supported by new AWS accounts.
+
+### EC2 Autoscaling
+Is the mechanism that allows you to increase or decrease your EC2 resources based off of custom defined metrics and thresholds.
 
