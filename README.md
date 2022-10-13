@@ -206,3 +206,21 @@ No longer supported by new AWS accounts.
 ### EC2 Autoscaling
 Is the mechanism that allows you to increase or decrease your EC2 resources based off of custom defined metrics and thresholds.
 
+```
+    Automation
+    Your infrastructure can elastically provision the required resources preventing your operation
+    team from manually deploying and removing resources.
+```
+```
+```
+    Greator customer satisfaction
+    If you are always able to provision enough capacity within your environment, 
+    then its end users will exprerience performance issues.
+```
+```
+    Cost reduction
+    With the ability to automatically reduce the amount of resources you 
+    have when the demand drops,  you will stop paying for those resources.
+```
+#### Components of autoscaling
+
