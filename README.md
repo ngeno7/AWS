@@ -223,4 +223,6 @@ Is the mechanism that allows you to increase or decrease your EC2 resources base
     have when the demand drops,  you will stop paying for those resources.
 ```
 #### Components of autoscaling
-
+    - Launch configuration/launch template
+    - Autoscaling group
+ 
