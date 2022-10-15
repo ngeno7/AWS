@@ -93,6 +93,10 @@ In the end of an EC2 creation, you will be asked to select an existing key pair 
 
     It is your responsibility to maintain and install the latest OS updates and security patches released by the OS vendor as dictacted within the AWS shared responsibility model.
 
+## EC2 Container Service
+This service allows you to run docker-enabled applications packaged as containers across a cluster of EC2 instances. without requiring you to manage a complex and administratively heavy cluster management system. The burdern of running your own cluster management system is abstracted with the ECS service by passing that responsibility over to AWS, specifically through the use of AWS Fargate.
+**Container** - Contains everything an application needs to run from within its container package. They are decoupled from the operating system making container applications very portable.
+
 ## AWS NETWORKING FUNDAMENTALS
 Default VPC has: 
     - IPv4 CIDR block
@@ -271,4 +275,3 @@ Is the mechanism that allows you to increase or decrease your EC2 resources base
 #### Components of autoscaling
     - Launch configuration/launch template
     - Autoscaling group
-   
