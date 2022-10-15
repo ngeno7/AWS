@@ -99,9 +99,9 @@ This service allows you to run docker-enabled applications packaged as container
 ECS removes the need for you to manage your own cluster management system thanks to its interaction with AWS Fargate.
 With ECS there is no need to install any management or monitoring software for your cluster.
 #### Launching ECS Cluster:
-**- Fargate Launch:**
+- **Fargate Launch:**
         Requires you to specify the CPU and memory required, define networking and IAM policies. In addition to you having to package your applications into containers.
-**- EC2 Launch:**
+- **EC2 Launch:**
         You are responsible for patching and scaling your instances and you can specify the instance type and how many containers should be in a cluster.
 #### Monitoring Containers:
 Monitoring is taken care of through the use of Amazon Cloudwatch. You can easily create alarms based off of these metrics, providing you notification of when specific events occur, such as your cluster size scaling up and down.
