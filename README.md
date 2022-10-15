@@ -72,7 +72,7 @@ Relates to what underlying host your EC2 instance will reside on (Physical serve
     - Same as instance but there is additional visibility and control on the physical host.
     - Allows you to use the same host for a number of instances.
     - Maybe required to meet compliance
- 
+
 ##### User Data
 Allows you to enter commands that will run during the first boot up on that instance.
     - Perform functions upon boot such as pull down any additional software you want.
@@ -105,6 +105,16 @@ With ECS there is no need to install any management or monitoring software for y
         You are responsible for patching and scaling your instances and you can specify the instance type and how many containers should be in a cluster.
 #### Monitoring Containers:
 Monitoring is taken care of through the use of Amazon Cloudwatch. You can easily create alarms based off of these metrics, providing you notification of when specific events occur, such as your cluster size scaling up and down.
+
+```
+Amazon ECS cluster is comprised of a collection of EC2 instances. Features such as Security Groups, Elastic Load Balancing 
+and Auto Scaling can be used with these instances.
+
+Clusters act as a resource pool, aggregating resources such as CPU and memory.
+
+Clusters 
+```
+---
 
 ## AWS NETWORKING FUNDAMENTALS
 Default VPC has: 
