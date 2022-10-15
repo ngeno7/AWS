@@ -26,29 +26,67 @@ EC2 instance can be broken down into
  Are essentially templates of preconfigured EC2 instances which allow you to launch a new EC2 instance based on the configuration within the AMI.
  An AMI is an image baseline within an OS and application along with any custom configuration.
  ##### Instance Types
- Once an AMI is selected, you have to select an instance type. Instance type defines the software of the instance based on a number of parameters.
+ Once an AMI is selected, you have to select an instance type. Instance type defines the size of the instance based on a number of parameters: ECUs, vCPUs, Physical processor, clock speed, memory, instance storage, EBS optimized available, Network performance, IPv6 support, Processor architecture, AES-NI, AVX, Turbo.
  ##### Instance Purchasing Options
-  - On demand instances: Can be launched at any time, used as long as you need, flat rate, used for short-term use cases.
-  - Reserved Instances: Purchased for a set period of time for reduced cost.
-  - Scheduled Instances: Pay for reservations for a recurring schedule. eg daily, weekly or monthly.
-  - Spot Instances: Bid for unused EC2 Compute resources. Purchase large instances at a low price.
+  - On demand instances: 
+  
+        - Can be launched at any time, used as long as you need, flat rate, used for short-term use cases.
+        - Best fit for testing and development purposes.
+        - 
+  - Reserved Instances: 
+  
+        - Purchased for a set period of time for reduced cost.
+        - All upfront complete payment for 1 or 3 year time frame.
+        - Best for long term, predictable workloads.
+        - 
+  - Scheduled Instances: 
+  
+        - Pay for reservations for a recurring schedule. eg daily, weekly or monthly.
+        - You could set up a scheduled instance to run during that set time frame once a week.
+  - Spot Instances: 
+  
+        - Bid for unused EC2 Compute resources.
+        - Cons: No guarantees for a fixed period of time.
+        - Fluctuation of prices due to supply and demand.
+        - Pros: Purchase large EC2 instances at a very low price.
+        - Used for processing data that can be suddenly interrupted.
   - On-demand Capacity Reservations: 
+  
+        - Reserve capacity based on different attributes such as instance type, 
+            platform and tenancy within a particular availability zone for any period of time.
+        - Could be used in conjunction with your reserved instance discount.
 ##### Tenancy
 Relates to what underlying host your EC2 instance will reside on (Physical server in a data center). 
- - Shared tenancy: Maybe used by multiple customers.
- - Dedicated instances: Hosted on hardware no other customer can access.
- - Dedicated hosts: Same as instance but there is additional visibility and control on the physical host.
+ - Shared tenancy: 
+    - Maybe used by multiple customers.
+    - EC2 instance is launched on any available host with the required resources.
+    - AWS security mechanisms prevent one EC2 instance from accessing another in the same host.
+ - Dedicated instances: 
+    - Hosted on hardware no other customer can access.
+    - Maybe required to meet compliance.
+    - Incur additional charges.
+ - Dedicated hosts: 
+    - Same as instance but there is additional visibility and control on the physical host.
+    - Allows you to use the same host for a number of instances.
+    - Maybe required to meet compliance
+    - 
+ 
 ##### User Data
 Allows you to enter commands that will run during the first boot up on that instance.
+    - Perform functions upon boot such as pull down any additional software you want.
+    - Download latest OS updates.
 ##### Storage Options
 Selecting storage for your EC2 instance will depend on instance selected, what you intend to use the instance for and how critical the data is.
- - Persistent storage: Available by attaching EBS volumes. EBS volumes are separated from the instance. volumes are logically attached Via AWS network. You can disconnect the volume from the instance maintaining the data.
- - Ephemeral storage: Created by EC2 instances using local storage. Physically attached to the instance. When instance is stopped or terminated, data is lost. If you reboot the data remain intact.
+ - Persistent storage: Available by attaching EBS volumes. EBS volumes are separated from the instance. volumes are logically attached Via AWS network. You can             disconnect the volume from the instance maintaining the data.
+ - Ephemeral storage: Created by EC2 instances using local storage. Physically attached to the instance. When instance is stopped or terminated, data is lost. If you       reboot the data remain intact.
 
 ##### Security
-During instance creation, you will be asked to select a security group for your instance. In the end of an EC2 creation, you will be asked to select an existing key pair or create and download a new one.
-A key pair is made up of a public key and private key.
+During instance creation, you will be asked to select a security group for your instance. 
+In the end of an EC2 creation, you will be asked to select an existing key pair or create and download a new one. A key pair is made up of a public key and private key. The function of key pairs is to encrypt log in information for linux and Windows EC2 instances and then decrypt the same information allowing you to authenticate on to the instance. ***Windows - Private key decrypts this data allowing you to gain access to the login credentials. In linux it allows you to remotely connect to the instance via SSH.***
 
+ - Public key is held and kept by AWS and private is your responsibility to keep and ensure it is not lost.
+ - It is possible to use the same key pair on multiple instances.
+ - You can set up additional less privileged access controls such as local windows accounts.
 
 ## AWS NETWORKING FUNDAMENTALS
 Default VPC has: 
@@ -217,12 +255,15 @@ Is the mechanism that allows you to increase or decrease your EC2 resources base
     If you are always able to provision enough capacity within your environment, 
     then its end users will exprerience performance issues.
 ```
+
 ```
     Cost reduction
     With the ability to automatically reduce the amount of resources you 
     have when the demand drops,  you will stop paying for those resources.
-```
+
+
+
 #### Components of autoscaling
     - Launch configuration/launch template
     - Autoscaling group
- 
+   
