@@ -25,8 +25,10 @@ EC2 instance can be broken down into
  ##### AMIs
  Are essentially templates of preconfigured EC2 instances which allow you to launch a new EC2 instance based on the configuration within the AMI.
  An AMI is an image baseline within an OS and application along with any custom configuration.
+ 
  ##### Instance Types
  Once an AMI is selected, you have to select an instance type. Instance type defines the size of the instance based on a number of parameters: ECUs, vCPUs, Physical processor, clock speed, memory, instance storage, EBS optimized available, Network performance, IPv6 support, Processor architecture, AES-NI, AVX, Turbo.
+ 
  ##### Instance Purchasing Options
   - On demand instances: 
   
