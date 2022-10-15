@@ -72,12 +72,12 @@ Relates to what underlying host your EC2 instance will reside on (Physical serve
     - Same as instance but there is additional visibility and control on the physical host.
     - Allows you to use the same host for a number of instances.
     - Maybe required to meet compliance
-    - 
  
 ##### User Data
 Allows you to enter commands that will run during the first boot up on that instance.
     - Perform functions upon boot such as pull down any additional software you want.
     - Download latest OS updates.
+
 ##### Storage Options
 Selecting storage for your EC2 instance will depend on instance selected, what you intend to use the instance for and how critical the data is.
  - Persistent storage: Available by attaching EBS volumes. EBS volumes are separated from the instance. volumes are logically attached Via AWS network. You can             disconnect the volume from the instance maintaining the data.
