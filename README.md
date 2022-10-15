@@ -93,9 +93,18 @@ In the end of an EC2 creation, you will be asked to select an existing key pair 
 
     It is your responsibility to maintain and install the latest OS updates and security patches released by the OS vendor as dictacted within the AWS shared responsibility model.
 
-## EC2 Container Service
+## EC2 Container Service:
 This service allows you to run docker-enabled applications packaged as containers across a cluster of EC2 instances. without requiring you to manage a complex and administratively heavy cluster management system. The burdern of running your own cluster management system is abstracted with the ECS service by passing that responsibility over to AWS, specifically through the use of AWS Fargate.
 **Container** - Contains everything an application needs to run from within its container package. They are decoupled from the operating system making container applications very portable.
+ECS removes the need for you to manage your own cluster management system thanks to its interaction with AWS Fargate.
+With ECS there is no need to install any management or monitoring software for your cluster.
+#### Launching ECS Cluster:
+**- Fargate Launch:**
+        Requires you to specify the CPU and memory required, define networking and IAM policies. In addition to you having to package your applications into containers.
+**- EC2 Launch:**
+        You are responsible for patching and scaling your instances and you can specify the instance type and how many containers should be in a cluster.
+#### Monitoring Containers:
+Monitoring is taken care of through the use of Amazon Cloudwatch. You can easily create alarms based off of these metrics, providing you notification of when specific events occur, such as your cluster size scaling up and down.
 
 ## AWS NETWORKING FUNDAMENTALS
 Default VPC has: 
@@ -103,7 +112,7 @@ Default VPC has:
     - /20 default subnet
     - Connected Internet Gateway
     - Security Group (SG)
-** RFC1918 Range **
+**RFC1918 Range**
 Avoid ranges that override with other networks to which you might connect.
 #### Security Groups
     - Operates at the instance level
