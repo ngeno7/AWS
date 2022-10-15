@@ -112,7 +112,14 @@ and Auto Scaling can be used with these instances.
 
 Clusters act as a resource pool, aggregating resources such as CPU and memory.
 
-Clusters 
+Clusters are dynamically scalable and scalable and multiple instances can be used.
+
+Clusters can only scale in a single region.
+
+Containers can be scheduled to be deployed across your cluster.
+
+Instances within the cluster also have a Docker daemon and an ECS agent.
+
 ```
 ---
 
