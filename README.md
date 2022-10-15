@@ -55,6 +55,7 @@ EC2 instance can be broken down into
         - Reserve capacity based on different attributes such as instance type, 
             platform and tenancy within a particular availability zone for any period of time.
         - Could be used in conjunction with your reserved instance discount.
+ 
 ##### Tenancy
 Relates to what underlying host your EC2 instance will reside on (Physical server in a data center). 
  - Shared tenancy: 
@@ -87,6 +88,8 @@ In the end of an EC2 creation, you will be asked to select an existing key pair 
  - Public key is held and kept by AWS and private is your responsibility to keep and ensure it is not lost.
  - It is possible to use the same key pair on multiple instances.
  - You can set up additional less privileged access controls such as local windows accounts.
+
+    It is your responsibility to maintain and install the latest OS updates and security patches released by the OS vendor as dictacted within the AWS shared responsibility model.
 
 ## AWS NETWORKING FUNDAMENTALS
 Default VPC has: 
