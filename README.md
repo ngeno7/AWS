@@ -119,8 +119,34 @@ Clusters can only scale in a single region.
 Containers can be scheduled to be deployed across your cluster.
 
 Instances within the cluster also have a Docker daemon and an ECS agent.
-
 ```
+
+## Amazon Elastic Container Registry (ECR)
+ECR provides a secure location to store and manage your docker images. This is a managed service, so you dont need to provision any infrastructure to allow you to create this registry of docker images. This service allows developers to push, pull and manage their library of docker images in a central and secure location.
+
+#### Components
+  - Registry: The ECR registry allows you to host and store your docker images, as well as create image repositories. Your account will have read and write access by default to any images you create within your registry or any repositories. Access can be controlled via IAM policies in addition to repository policies. Before your docker client can access your registry, it needs to be authenticated as ***AWS User via Authorization Token***
+  - Authorization Token: 
+  - Repository: These are objects within your registry that allows you to group together and secure different docker images. You can create multiple repositories with the registry allow you to organize and manage your docker images into different categories. Using policies from both IAM and repository policies you can assign set permissions to each repository.
+  - Repository Policy: Are resource based policies. You need to ensure you add a principal to the policy to determine who has access and what permissions they have. For an AWS user to gain access to the registry, they will require access to the ***ecr:GetAuthorizationToken*** API call.
+  - Image: 
+
+## Amazon EKS - Elastic Container Service For Kubernetes
+
+## AWS Elastic Beanstalk
+Is an AWS managed service that takes your uploaded code of your web application and automatically provisions and deploys the required resources within AWS to make web application operational.
+These resources include EC2, Auto scaling, application health monitoring and elastic load balancing, in addition to capacity provisioning.
+It is able to operate with a variety of platforms and programming languages.
+### Components
+ - Application Version: Is a specific reference to deployable code. The application version will point typically to S3, simple storage service to where the code may reside.
+ - Environment: An environment refers to an application version that has been deployed on AWS resources, which are configured and provisioned by AWS beanstalk.
+ At this stage, the application is deployed as a solution and becomes operational within your environment. It is comprised of all the resources created by Elastic Beanstalk not just the EC2 instance with the uploaded code.
+ - Environment Configurations: This is a collection of parameters and settings that dictate how and environment will have its resources provisioned by Elastic Beanstalk and how these resources will behave. 
+ - Environment Tier: Web server or worker environment.
+ - Configuration Template: Baseline for creating new/unique environment configuration.
+ - Platform: Is a culmination of components in which you can build your application upon using elastic beanstalk.
+ - Applications: Application is a collection of different elements such as environments, environment configurations and application versions.
+ - 
 ---
 
 ## AWS NETWORKING FUNDAMENTALS
