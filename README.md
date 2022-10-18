@@ -159,6 +159,24 @@ The service does require compute power to carry out your code requests, but beca
 2. Configure your lambda functions to execute upon specific triggers from supported event sources.
 3. Once the specific trigger is initiated, Lambda will run your code (as per your Lambda function) using only the required compute power as defined.
 4. AWS records the compute time in milliseconds and the quantity of Lambda functions run to ascertain the cost of service.
+
+#### Components of AWS Lambda
+  - Lambda Function: Is compiled of your own code that you want Lambda to invoke as per defined triggers. 
+  - Event sources: are AWS services that can be used to trigger your Lambda Functions.
+  - Trigger: Is essentially an operation from an event source that causes the function to invoke.
+  - Downstream Resources: Are resources that are required during the execution of your Lambda Function.
+  - Log streams: Help to identify issues and troubleshoot issues with your Lambda function. These issues would essentially be a sequence of events that all come from the same function and recorded in CloudWatch.
+
+#### Creating Lambda function
+At a high level, configuration steps for creating a blueprint include:
+  1. Selecting a blueprint: Select a blueprint template provided by AWS Lambda
+  2. Configure triggers: Define the trigger for your Lambda Function.
+  3. Configure Functions: Define the required resources, maximum execution timeout, IAM Role, and Handle Name.
+
+### AWS BATCH
+Is used to manage and run batch computing workloads within AWS.
+#### Components of Batch Services
+
 ---
 
 ## AWS NETWORKING FUNDAMENTALS
