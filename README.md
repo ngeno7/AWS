@@ -147,6 +147,18 @@ It is able to operate with a variety of platforms and programming languages.
  - Platform: Is a culmination of components in which you can build your application upon using elastic beanstalk.
  - Applications: Application is a collection of different elements such as environments, environment configurations and application versions.
  - 
+
+## AWS LAMBDA
+The AWS lambda is a serveless compute service that allows you to run your application code without having to manage EC2 instances.
+It means you dont have to worry about provisioning and managing your compute resource to run your own code, instead it managed and provisioned by AWS.
+
+The service does require compute power to carry out your code requests, but because the AWS user does not need to be concerned with what managing this compute power or where it is provisioned from. It is considered **serveless** from the user perspective.
+
+#### Steps of operations
+1. You can either upload your code to Lambda or write with provide code editors. Languages include: **Nodejs, Java, C#, Python, Go, Powershell and Ruby**
+2. Configure your lambda functions to execute upon specific triggers from supported event sources.
+3. Once the specific trigger is initiated, Lambda will run your code (as per your Lambda function) using only the required compute power as defined.
+4. AWS records the compute time in milliseconds and the quantity of Lambda functions run to ascertain the cost of service.
 ---
 
 ## AWS NETWORKING FUNDAMENTALS
