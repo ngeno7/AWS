@@ -30,33 +30,27 @@ EC2 instance can be broken down into
  Once an AMI is selected, you have to select an instance type. Instance type defines the size of the instance based on a number of parameters: ECUs, vCPUs, Physical processor, clock speed, memory, instance storage, EBS optimized available, Network performance, IPv6 support, Processor architecture, AES-NI, AVX, Turbo.
  
  ##### Instance Purchasing Options
-  - On demand instances: 
-  
-        - Can be launched at any time, used as long as you need, flat rate, used for short-term use cases.
-        - Best fit for testing and development purposes.
-        - 
+  - On demand instances:
+       - Can be launched at any time, used as long as you need, flat rate, used for short-term use cases.
+       - Best fit for testing and development purposes.
   - Reserved Instances: 
-  
-        - Purchased for a set period of time for reduced cost.
-        - All upfront complete payment for 1 or 3 year time frame.
-        - Best for long term, predictable workloads.
+       - Purchased for a set period of time for reduced cost.
+       - All upfront complete payment for 1 or 3 year time frame.
+       - Best for long term, predictable workloads.
         - 
-  - Scheduled Instances: 
-  
-        - Pay for reservations for a recurring schedule. eg daily, weekly or monthly.
-        - You could set up a scheduled instance to run during that set time frame once a week.
-  - Spot Instances: 
-  
-        - Bid for unused EC2 Compute resources.
-        - Cons: No guarantees for a fixed period of time.
-        - Fluctuation of prices due to supply and demand.
-        - Pros: Purchase large EC2 instances at a very low price.
-        - Used for processing data that can be suddenly interrupted.
-  - On-demand Capacity Reservations: 
-  
-        - Reserve capacity based on different attributes such as instance type, 
-            platform and tenancy within a particular availability zone for any period of time.
-        - Could be used in conjunction with your reserved instance discount.
+  - Scheduled Instances:
+       - Pay for reservations for a recurring schedule. eg daily, weekly or monthly.
+       - You could set up a scheduled instance to run during that set time frame once a week.
+  - Spot Instances:
+       - Bid for unused EC2 Compute resources.
+       - Cons: No guarantees for a fixed period of time.
+       - Fluctuation of prices due to supply and demand.
+       - Pros: Purchase large EC2 instances at a very low price.
+       - Used for processing data that can be suddenly interrupted.
+  - On-demand Capacity Reservations:
+      - Reserve capacity based on different attributes such as instance type, 
+         platform and tenancy within a particular availability zone for any period of time.
+      - Could be used in conjunction with your reserved instance discount.
  
 ##### Tenancy
 Relates to what underlying host your EC2 instance will reside on (Physical server in a data center). 
